@@ -1,0 +1,126 @@
+ a {
+    color: #2a2d31;
+ }
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #2c446f;    
+    text-align: center;    
+    align-items: center;
+    justify-content: center;
+    color: #8b1540;
+    margin: 10px;
+    padding: 10px;
+}
+
+.demo, .summary, .work-exp, .education, .skills, .projects {
+    background: #f9bc2f;
+    width: 95%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    gap: 10px;
+    
+}
+
+.job-title-years, .job-desc, .project-desc, .education {
+    text-align: left;    
+    align-items: left;
+    justify-content: left;
+}
+
+.education-title {
+    text-align: center;    
+    align-items: center;
+    justify-content: center;
+}
+
+.skillset {
+    columns: 2;
+}
+
+
+@media (min-width : 1200px) {
+ 
+ a {
+    color: whitesmoke;
+ }
+
+.flex-container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-areas: 
+    "project project demo demo demo demo work-exp work-exp"
+    "project project demo demo demo demo work-exp work-exp"
+    "project project summary summary summary summary work-exp work-exp"
+    "project project summary summary summary summary work-exp work-exp"
+    "project project education education skills skills work-exp work-exp"
+    "project project education education skills skills work-exp work-exp"    
+    "project project education education skills skills work-exp work-exp" 
+    "project project education education skills skills work-exp work-exp"    
+    ;
+    background-color: #fd7f20;    
+    text-align: center;    
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+    margin: 10px;
+    padding: 10px;
+    gap: 10px;
+}
+
+.demo, .summary, .work-exp, .education, .skills, .projects {
+    background: #fc2e20;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    gap: 10px;   
+}
+
+.job-title-years, .job-desc, .project-desc, .education {
+    display: flex;
+    text-align: left;    
+    align-items: left;
+    justify-content: left;
+}
+
+.education-title {
+    text-align: center;    
+    align-items: center;
+    justify-content: center;
+}
+
+.projects {
+    grid-area: project;
+    height: 95%;
+    justify-content: space-evenly;
+}
+
+.demo {
+    grid-area: demo;
+    height: 80%;
+    width: 97.5%;
+}
+
+.summary {
+    grid-area: summary;
+    height: 100%;
+    width: 97.5%;
+}
+
+.education {
+    grid-area: education;
+    height: 90%;
+}
+
+.skills {
+    grid-area: skills;
+    height: 90%;
+}
+
+.work-exp {
+    grid-area: work-exp;
+    height: 95%;    
+}
